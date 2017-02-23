@@ -1,7 +1,7 @@
 {
   "name": "consolekit",
   "version": "1.0.0",
-  "description": "Console decoeration and level restriction for node",
+  "description": "Console decoration with colors and level restriction for node",
   "main": "consolekit.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
