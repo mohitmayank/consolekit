@@ -1,0 +1,27 @@
+{
+  "name": "consolekit",
+  "version": "1.0.0",
+  "description": "Console decoeration and level restriction for node",
+  "main": "consolekit.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohitmayank/consolekit.git"
+  },
+  "keywords": [
+    "console",
+    "node",
+    "javascript"
+  ],
+  "author": "Mohit Jain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mohitmayank/consolekit/issues"
+  },
+  "homepage": "https://github.com/mohitmayank/consolekit#readme",
+  "dependencies": {
+    "isbrowser": "^0.1.0"
+  }
+}
