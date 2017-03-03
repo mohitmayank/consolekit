@@ -1,6 +1,6 @@
 {
   "name": "consolekit",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Console decoration with colors and level restriction for node",
   "main": "consolekit.js",
   "scripts": {
