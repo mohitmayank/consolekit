@@ -90,14 +90,34 @@ var methods = [
 	'log'
 ];
 
+var _console = {
+	error : console.error,
+	warn : console.warn,
+	info : console.info,
+	trace : console.trace,
+	log : console.log
+};
+
 var noop = function(){};
 
-if(process.env.LOG_LEVEL) {
-	var lvl = methods.indexOf(process.env.LOG_LEVEL);
-
-	if(lvl) {
-		for(var i = lvl; i < methods.length - 1; i++) {
-			console[methods[i+1]] = noop;
+var consolekit = function(lvl){
+	if(lvl === undefined) {
+		if(process && process.env && process.env.LOG_LEVEL) {
+			lvl = process.env.LOG_LEVEL;
+		} else {
+			lvl = 'log';
 		}
 	}
-}
+	
+	lvl = !lvl ? 0 : methods.indexOf(lvl);;
+	
+	for(var i = lvl; i < methods.length - 1; i++) {
+		console[methods[i+1]] = noop;
+	}
+	
+	for(var j = 1; j <= lvl; j++) {
+		console[methods[j]] = _console[methods[j]];
+	}
+};
+
+exports = module.exports = consolekit;
