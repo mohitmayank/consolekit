@@ -24,3 +24,4 @@ console.warn('console.warn');
 console.error('console.error');
 ```
 
+![consolekit](https://i.imgur.com/moEns6Y.png)
